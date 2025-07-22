@@ -8,13 +8,7 @@ export default class ContactComponent extends LightningElement {
         const value = event.target.value;
 
         this.dispatchEvent(new CustomEvent('childchange', {
-            detail: {
-                section: 'contact',
-                field,
-                value
-            },
-            bubbles: true,
-            composed: true
+            detail: { section: 'contact', field, value }, bubbles: true, composed: true
         }));
     }
 
