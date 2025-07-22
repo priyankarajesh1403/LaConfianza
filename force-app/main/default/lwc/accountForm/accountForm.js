@@ -70,17 +70,15 @@ export default class AccountForm extends LightningElement {
                     oppPhone: this.formData.opportunity.Phone__c,
                     oppIndustry: this.formData.opportunity.Industry__c
                 };
-            console.log('wrapperData 1--'+JSON.stringify(this.formData));
-            console.log('wrapperData 2--'+JSON.stringify(wrapperData));
+            
             await saveRecords({ formData: wrapperData });
-            // Reset
+            
             this.formData = {
                 account: { Name: '', Phone: '', Email__c: '', Industry__c: '', Amount__c: '' },
                 contact: { LastName: '', Email: '', Phone: '', Industry__c: '', Amount__c: '' },
                 opportunity: { Name: '', Industry__c: '', Amount: '', Email__c: '', Phone__c: '', StageName: '', CloseDate: ''}
             };
             this.refreshChildren();
-            //alert('Records saved successfully!');
         } catch (err) {
             console.error(err);
             alert('Error saving records');
