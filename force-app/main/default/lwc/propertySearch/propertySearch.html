@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Property Search">
+        <div class="slds-p-around_medium">
+            <lightning-input label="Street" value={street} onchange={handleInput}></lightning-input>
+            <lightning-input label="City" value={city} onchange={handleInput}></lightning-input>
+            <lightning-input label="State" value={state} onchange={handleInput}></lightning-input>
+            <lightning-input label="Zip" value={zip} onchange={handleInput}></lightning-input>
+            <lightning-button label="Search" onclick={handleSearch} class="slds-m-top_small"></lightning-button>
+        </div>
+
+        <template if:true={properties}>
+            <lightning-datatable key-field="_id" data={properties} columns={columns} hide-checkbox-column>
+            </lightning-datatable>
+        </template>
+    </lightning-card>
+</template>
