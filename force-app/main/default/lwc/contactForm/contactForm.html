@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Contact Info">
+        <lightning-input label="Name" value={data.contact.LastName} onchange={handleChange} data-id="LastName"></lightning-input>
+        <lightning-input label="Email" value={data.contact.Email} onchange={handleChange} data-id="Email"></lightning-input>
+        <lightning-input label="Phone" value={data.contact.Phone} onchange={handleChange} data-id="Phone"></lightning-input>
+        <lightning-input label="Industry" value={data.contact.Industry__c} onchange={handleChange} data-id="Industry__c"></lightning-input>
+        <lightning-input label="Amount" value={data.contact.Amount__c} onchange={handleChange} data-id="Amount__c"></lightning-input>
+    </lightning-card>
+</template>
