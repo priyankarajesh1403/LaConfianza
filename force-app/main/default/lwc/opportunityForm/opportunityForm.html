@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Opportunity Info">
+        <lightning-input label="Opportunity Name" value={data.opportunity.Name} onchange={handleChange} data-id="Name"></lightning-input>
+        <lightning-input label="Amount" value={data.opportunity.Amount} onchange={handleChange} data-id="Amount"></lightning-input>
+        <lightning-input label="Email" value={data.opportunity.Email__c} onchange={handleChange} data-id="Email__c"></lightning-input>
+        <lightning-input label="Phone" value={data.opportunity.Phone__c} onchange={handleChange} data-id="Phone__c"></lightning-input>
+        <lightning-input label="Industry" value={data.opportunity.Industry__c} onchange={handleChange} data-id="Industry__c"></lightning-input>
+        <lightning-input label="Stage Name" value={data.opportunity.StageName} onchange={handleChange} data-id="StageName"></lightning-input>
+        <lightning-input label="Close Date" value={data.opportunity.CloseDate} onchange={handleChange} type="date" data-id="CloseDate"></lightning-input>
+    </lightning-card>
+</template>
